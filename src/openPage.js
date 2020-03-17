@@ -24,7 +24,7 @@ module.exports = async (browser, cookies, url) => {
     height: 1080
   })
 
-  await page.goto(url)
+  await page.goto(url, {waitUntil: 'load', timeout: 0})
 
   return page
 }
